@@ -65,7 +65,7 @@ localhost:6611 ==> qa-nmd00028.taboolasyndication.com:21997
 2. Run ```git clone https://github.com/guypeled76/portproxy.git```
 3. cd into 'portproxy' directory
 4. Change the content of the local.properties / remote.properties files to feet your mappings
-5. run the ./portproxy.sh bash script your terminal 
+5. run the ```./portproxy.sh``` in your terminal 
 
 ##### After running the bash script you will get the following output:
 
