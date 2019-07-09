@@ -61,4 +61,5 @@ localhost:6611 ==> qa-nmd00028.taboolasyndication.com:21997
 
 #### How to run the code:
 
-1. Change the content of the local.properties / remote.properties files 
+1. Change the content of the local.properties / remote.properties files
+2. run the ./portproxy.sh bash script your terminal 
