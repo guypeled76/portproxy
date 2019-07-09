@@ -6,7 +6,7 @@ Provides local mapping from local ports to remote ports
 
 The utility maps between local ports and remote ports using property files.
 Define your local ports in the local.properties file and name them at the process.
-Define your report host and port in the remote.properties file and use the same name
+Define your remote hosts and ports in the remote.properties file and use the same name
 you used for the local port.
 
 The utility maps from local ports to remote hosts using the names in the two files.
