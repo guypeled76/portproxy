@@ -64,7 +64,7 @@ localhost:6611 ==> qa-nmd00028.taboolasyndication.com:21997
 1. Make sure you have go 112 installed
 2. Run ```git clone https://github.com/guypeled76/portproxy.git```
 3. cd into 'portproxy' directory
-4. Change the content of the local.properties / remote.properties files to feet your mappings
+4. Change the content of the local.properties / remote.properties files to fit your mappings
 5. run the ```./portproxy.sh``` in your terminal 
 
 ##### After running the bash script you will get the following output:
