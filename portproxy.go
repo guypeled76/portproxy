@@ -32,12 +32,12 @@ func main() {
 	local := properties.MustLoadFile(args.Local, properties.UTF8).Map()
 	remote := properties.MustLoadFile(args.Remote, properties.UTF8).Map()
 
-	for name, fromPort := range local {
-		toHost, hasHost := remote[name]
+	for proxyName, fromPort := range local {
+		toHost, hasHost := remote[proxyName]
 		if hasHost {
-			go proxy.CreatePortProxy(fmt.Sprintf("localhost:%s", fromPort), toHost)
+			go proxy.CreatePortProxy(proxyName, fmt.Sprintf("localhost:%s", fromPort), toHost)
 		} else {
-			log.Printf("Could not find mapping for %s", name)
+			log.Printf("Could not find mapping for %s", proxyName)
 		}
 	}
 

@@ -6,9 +6,9 @@ import (
 	"net"
 )
 
-func CreatePortProxy(fromHost string, toHost string) {
+func CreatePortProxy(proxyName string, fromHost string, toHost string) {
 
-	log.Printf("Creating proxy from %s to %s. \n", fromHost, toHost)
+	log.Printf("Creating '%s' proxy from %s to %s. \n", proxyName, fromHost, toHost)
 
 	ln, err := net.Listen("tcp", fromHost)
 	if err != nil {

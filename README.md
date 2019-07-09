@@ -63,3 +63,21 @@ localhost:6611 ==> qa-nmd00028.taboolasyndication.com:21997
 
 1. Change the content of the local.properties / remote.properties files
 2. run the ./portproxy.sh bash script your terminal 
+
+##### After running the bash script you will get the following output:
+
+```
+2019/07/09 12:06:03 Initializing port proxy based on local.properties to remote.properties.
+2019/07/09 12:06:03 Creating 'memcached.host' proxy from localhost:6601 to qa-nmd00023.taboolasyndication.com:28070.
+2019/07/09 12:06:03 Creating 'cassandra_cql001.host' proxy from localhost:6611 to qa-nmd00028.taboolasyndication.com:21997.
+2019/07/09 12:06:03 Creating 'kafka.host' proxy from localhost:6603 to qa-nmd00022.taboolasyndication.com:26653.
+2019/07/09 12:06:03 Creating 'mysql001.host' proxy from localhost:6609 to qa-nmd00021.taboolasyndication.com:23472.
+2019/07/09 12:06:03 Creating 'cassandra.cql.host' proxy from localhost:6605 to qa-nmd00028.taboolasyndication.com:26852.
+2019/07/09 12:06:03 Creating 'cassandra.thrift.host' proxy from localhost:6606 to qa-nmd00028.taboolasyndication.com:21997.
+2019/07/09 12:06:03 Creating 'zookeeper.host' proxy from localhost:6602 to qa-nmd00003.taboolasyndication.com:23565.
+2019/07/09 12:06:03 Creating 'mysql.host' proxy from localhost:6604 to qa-nmd00021.taboolasyndication.com:23472.
+2019/07/09 12:06:03 Creating 'trc001.debug' proxy from localhost:6608 to qa-nmd00013.taboolasyndication.com:30884.
+2019/07/09 12:06:03 Creating 'vertica001.host' proxy from localhost:6610 to qa-nmd00008.taboolasyndication.com:23696.
+2019/07/09 12:06:03 Creating 'trc001.host' proxy from localhost:6607 to qa-nmd00013.taboolasyndication.com:21306.
+```
+
