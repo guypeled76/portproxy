@@ -6,6 +6,7 @@ import (
 	"github.com/guypeled76/portproxy/proxy"
 	"github.com/magiconair/properties"
 	"log"
+	"os"
 	"sync"
 )
 
@@ -17,6 +18,14 @@ func main() {
 	}
 
 	arg.MustParse(&args)
+
+	if _, err := os.Stat(args.Local); os.IsNotExist(err) {
+		log.Fatalf("Local properties file '%s' was not found.", args.Local)
+	}
+
+	if _, err := os.Stat(args.Remote); os.IsNotExist(err) {
+		log.Fatalf("Remote properties file '%s' was not found.", args.Remote)
+	}
 
 	log.Printf("Initializing port proxy based on %s to %s. \n", args.Local, args.Remote)
 
