@@ -44,7 +44,7 @@ vertica001.host=qa-nmd00008.taboolasyndication.com:23696
 cassandra_cql001.host=qa-nmd00028.taboolasyndication.com:21997
 ```
 
-##### The files above create the following mappings:
+##### The files above creates the following mappings:
 ```
 localhost:6601 ==> qa-nmd00023.taboolasyndication.com:28070
 localhost:6602 ==> qa-nmd00003.taboolasyndication.com:23565
