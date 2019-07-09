@@ -1,2 +1,64 @@
-# portproxy
+# Port Proxy
+
 Provides local mapping from local ports to remote ports
+
+## How to use
+
+The utility maps between local ports and remote ports using property files.
+Define your local ports in the local.properties file and name them at the process.
+Define your report host and port in the remote.properties file and use the same name
+you used for the local port.
+
+The utility maps from local ports to remote hosts using the names in the two files.
+
+
+##### Sample local.properties file:
+
+```
+memcached.host=6601
+zookeeper.host=6602
+kafka.host=6603
+mysql.host=6604
+cassandra.cql.host=6605
+cassandra.thrift.host=6606
+trc001.host=6607
+trc001.debug=6608
+mysql001.host=6609
+vertica001.host=6610
+cassandra_cql001.host=6611
+```
+
+##### Sample remote.properties file:
+
+```
+memcached.host=qa-nmd00023.taboolasyndication.com:28070
+zookeeper.host=qa-nmd00003.taboolasyndication.com:23565
+kafka.host=qa-nmd00022.taboolasyndication.com:26653
+mysql.host=qa-nmd00021.taboolasyndication.com:23472
+cassandra.cql.host=qa-nmd00028.taboolasyndication.com:26852
+cassandra.thrift.host=qa-nmd00028.taboolasyndication.com:21997
+trc001.host=qa-nmd00013.taboolasyndication.com:21306
+trc001.debug=qa-nmd00013.taboolasyndication.com:30884
+mysql001.host=qa-nmd00021.taboolasyndication.com:23472
+vertica001.host=qa-nmd00008.taboolasyndication.com:23696
+cassandra_cql001.host=qa-nmd00028.taboolasyndication.com:21997
+```
+
+##### The files above create the following mappings:
+```
+localhost:6601 ==> qa-nmd00023.taboolasyndication.com:28070
+localhost:6602 ==> qa-nmd00003.taboolasyndication.com:23565
+localhost:6603 ==> qa-nmd00022.taboolasyndication.com:26653
+localhost:6604 ==> qa-nmd00021.taboolasyndication.com:23472
+localhost:6605 ==> qa-nmd00028.taboolasyndication.com:26852
+localhost:6606 ==> qa-nmd00028.taboolasyndication.com:21997
+localhost:6607 ==> qa-nmd00013.taboolasyndication.com:21306
+localhost:6608 ==> qa-nmd00013.taboolasyndication.com:30884
+localhost:6609 ==> qa-nmd00021.taboolasyndication.com:23472
+localhost:6610 ==> qa-nmd00008.taboolasyndication.com:23696
+localhost:6611 ==> qa-nmd00028.taboolasyndication.com:21997
+```
+
+#### How to run the code:
+
+1. Change the content of the local.properties / remote.properties files 
